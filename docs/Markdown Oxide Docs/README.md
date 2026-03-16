@@ -1,5 +1,7 @@
 
 **markdown-oxide**: PKM (Personal-Knowledge-Management) Markdown Language Server for your favorite text-editor. 
+(this version is a hard fork that with little to no AI contributions after 3/16/26; may progress to a full reimplementation
+if I have the time and interest)
 
 **[Quick Start](#quick-start)**
 
@@ -30,46 +32,8 @@ Set up the PKM for your text editor...
 
 ## Neovim
 
-- Give Neovim access to the binary.
-    - Arch Linux: `pacman -S markdown-oxide`
-    - [Mason.nvim](https://github.com/williamboman/mason.nvim) (from hosted binary)
-    - Nix: `pkgs.markdown-oxide`
-    - Alpine Linux: `apk add markdown-oxide`
-    - openSUSE: `zypper install markdown-oxide`
-    - Conda: `conda install conda-forge::markdown-oxide`
-    <details>
-         <summary>Cargo Install (from source)</summary>
-    
-        ```bash
-        cargo install --locked --git https://github.com/Feel-ix-343/markdown-oxide.git markdown-oxide
-        ```
-    
-    </details>
-    <details>
-         <summary>Cargo binstall (from hosted binary)</summary>
-    
-        ```bash
-        cargo binstall --git 'https://github.com/feel-ix-343/markdown-oxide' markdown-oxide
-        ```
-    
-    </details>
-    <details>
-         <summary>Winget (Windows)</summary>
-    
-        ```bash
-        winget install FelixZeller.markdown-oxide
-        ```
-    
-    </details>
-    <details>
-         <summary>Homebrew (from package manager)</summary>
-    
-        ```bash
-        brew install markdown-oxide
-        ```
-    
-    </details>
-  
+- Give Neovim access to the binary. 
+    - (you'll have to compile from source to use this fork)
 - Modify your Neovim Configuration ^nvimconfigsetup
 
     - <details>
@@ -239,175 +203,29 @@ Set up the PKM for your text editor...
 ## VSCode
 
 Install the [vscode extension](https://marketplace.visualstudio.com/items?itemName=FelixZeller.markdown-oxide) (called `Markdown Oxide`). As for how the extension uses the language server, there are two options
-- Recommended: the extension will download the server's binary and use that
+- Recommended: the extension will download the server's binary and use that **(don't do this if you want to use this fork)**
 - The extension will use `markdown-oxide` from path. To install to your path, there are the following methods for VSCode:
-    - Arch Linux: `pacman -S markdown-oxide`
-    - Nix: `pkgs.markdown-oxide`
-    - Alpine Linux: `apk add markdown-oxide`
-    - openSUSE: `zypper install markdown-oxide`
-    - Conda: `conda install conda-forge::markdown-oxide`
-    <details>
-         <summary>Cargo Install (from source)</summary>
-    
-        ```bash
-        cargo install --locked --git https://github.com/Feel-ix-343/markdown-oxide.git markdown-oxide
-        ```
-    
-    </details>
-    <details>
-         <summary>Cargo binstall[1] (from hosted binary)</summary>
-    
-        ```bash
-        cargo binstall --git 'https://github.com/feel-ix-343/markdown-oxide' markdown-oxide
-        ```
-    
-    </details>
-    <details>
-         <summary>Winget (Windows)</summary>
-    
-        ```bash
-        winget install FelixZeller.markdown-oxide
-        ```
-    
-    </details>
-    <details>
-         <summary>Homebrew (from package manager)</summary>
-    
-        ```bash
-        brew install markdown-oxide
-        ```
-    
-    </details>
+    - (you'll have to compile from source to use this fork)
 
 ## Zed
 
 Markdown Oxide is available as an extension titled `Markdown Oxide`. Similarly to VSCode, there are two methods for this extension to access the language server
 - Recommended: the extension will download the server's binary and use that
 - The extension will use `markdown-oxide` from path. To install to your path, there are the following methods for Zed:
-    - Arch Linux: `pacman -S markdown-oxide`
-    - Nix: `pkgs.markdown-oxide`
-    - Alpine Linux: `apk add markdown-oxide`
-    - openSUSE: `zypper install markdown-oxide`
-    - Conda: `conda install conda-forge::markdown-oxide`
-    <details>
-         <summary>Cargo Install (from source)</summary>
-    
-        ```bash
-        cargo install --locked --git https://github.com/Feel-ix-343/markdown-oxide.git markdown-oxide
-        ```
-    
-    </details>
-    <details>
-         <summary>Cargo binstall[1] (from hosted binary)</summary>
-    
-        ```bash
-        cargo binstall --git 'https://github.com/feel-ix-343/markdown-oxide' markdown-oxide
-        ```
-    
-    </details>
-    <details>
-         <summary>Winget (Windows)</summary>
-    
-        ```bash
-        winget install FelixZeller.markdown-oxide
-        ```
-    
-    </details>
-    <details>
-         <summary>Homebrew (from package manager)</summary>
-    
-        ```bash
-        brew install markdown-oxide
-        ```
-    
-    </details>
-
-    
+    - (you'll have to compile from source for this version)
+    - (you'll have to compile from source to use this fork)
 
 ## Helix
 
 For Helix, all you must do is install the language server's binary to your path. The following installation methods are available:
-- Arch Linux: `pacman -S markdown-oxide`
-- Nix: `pkgs.markdown-oxide`
-- Alpine Linux: `apk add markdown-oxide`
-- openSUSE: `zypper install markdown-oxide`
-- Conda: `conda install conda-forge::markdown-oxide`
-<details>
-     <summary>Cargo Install (from source)</summary>
-
-    ```bash
-    cargo install --locked --git https://github.com/Feel-ix-343/markdown-oxide.git markdown-oxide
-    ```
-
-</details>
-<details>
-    <summary>Cargo binstall[1] (from hosted binary)</summary>
-    
-    ```bash
-    cargo binstall --git 'https://github.com/feel-ix-343/markdown-oxide' markdown-oxide
-    ```
-    
-</details>
-<details>
-     <summary>Winget (Windows)</summary>
-
-    ```bash
-    winget install FelixZeller.markdown-oxide
-    ```
-
-</details>
-<details>
-     <summary>Homebrew (from package manager)</summary>
-
-    ```bash
-    brew install markdown-oxide
-    ```
-
-</details>
+- (you'll have to compile from source to use this fork)
 
 ## Kakoune
 
 Kakoune communicates with LSP servers through [kakoune-lsp](https://github.com/kakoune-lsp/kakoune-lsp) (binary name: `kak-lsp`). Install kakoune-lsp first if you haven't already.
 
 - Install the language server's binary to your path. The following installation methods are available:
-    - Arch Linux: `pacman -S markdown-oxide`
-    - Nix: `pkgs.markdown-oxide`
-    - Alpine Linux: `apk add markdown-oxide`
-    - openSUSE: `zypper install markdown-oxide`
-    - Conda: `conda install conda-forge::markdown-oxide`
-
-<details>
-     <summary>Cargo Install (from source)</summary>
-
-    ```bash
-    cargo install --locked --git https://github.com/Feel-ix-343/markdown-oxide.git markdown-oxide
-    ```
-
-</details>
-<details>
-    <summary>Cargo binstall (from hosted binary)</summary>
-
-    ```bash
-    cargo binstall --git 'https://github.com/feel-ix-343/markdown-oxide' markdown-oxide
-    ```
-
-</details>
-<details>
-     <summary>Winget (Windows)</summary>
-
-    ```bash
-    winget install FelixZeller.markdown-oxide
-    ```
-
-</details>
-<details>
-     <summary>Homebrew (from package manager)</summary>
-
-    ```bash
-    brew install markdown-oxide
-    ```
-
-</details>
+    - (you'll have to compile from source to use this fork)
 
 - Configure kakoune-lsp to use markdown-oxide. Add the following to your `kakrc` (requires kakoune-lsp v17+):
 
