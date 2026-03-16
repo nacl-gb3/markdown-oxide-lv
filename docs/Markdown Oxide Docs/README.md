@@ -1,7 +1,9 @@
 
 **markdown-oxide**: PKM (Personal-Knowledge-Management) Markdown Language Server for your favorite text-editor.   
-(this version is a hard fork that with little to no AI contributions after 3/16/26; may progress to a full reimplementation
-if I have the time and interest)
+- this version is a hard fork that with little to no AI contributions after
+3/16/26; new features will probably not be added that often; make no mistake,
+this is more or less just an ideological fork; do not bother using if you don't
+care about vibe coded software that much
 
 **[Quick Start](#quick-start)**
 
