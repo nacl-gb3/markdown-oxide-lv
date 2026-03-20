@@ -214,7 +214,6 @@ Install the [vscode extension](https://marketplace.visualstudio.com/items?itemNa
 Markdown Oxide is available as an extension titled `Markdown Oxide`. Similarly to VSCode, there are two methods for this extension to access the language server
 - Recommended: the extension will download the server's binary and use that
 - The extension will use `markdown-oxide` from path. To install to your path, there are the following methods for Zed:
-    - (you'll have to compile from source for this version)
     - (you'll have to compile from source to use this fork)
 
 ## Helix
